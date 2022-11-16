@@ -26,8 +26,11 @@ const AnnonceSchema = new Schema({
     motcles:{
         type:String,
         lowercase:true
-    }
-
+    },
+    Candidats:
+    
+        [{type:Schema.Types.ObjectId,ref:'Candidat'}]
+    
 
 })
 const annonce =mongoose.model('Annonce',AnnonceSchema)

@@ -12,9 +12,7 @@ const CandidatSchema=new Schema({
     },
 
 
-    likedIn:{
-        type:String,
-    },
+   
 
 
     profil:{

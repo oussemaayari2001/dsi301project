@@ -40,9 +40,30 @@ const deleteAnnonce=(req,res,next)=>{
 
 }
 
+
+
+const updateAnnonce = (req,res,next)=>{
+  
+  let Annonce_ajoutee = req.body
+
+annonce.findByIdAndUpdate(req.params.id,Annonce_ajoutee)  .then((res)=>{
+
+ res.json(res)
+
+}).catch((err)=>{
+  console.log(err);
+})
+
+
+}
+
+
+
+
 module.exports={
     saveAnnonce,
     getAll,
     getById,
-    deleteAnnonce
+    deleteAnnonce,
+    updateAnnonce
 }

@@ -5,9 +5,4 @@ const RH=require('./ResourseHumain')
 
 
 
-module.exports={
-    Annonce,
-    Candidat,
-
-    RH
-}
+module.exports={RH,Annonce,Candidat}
