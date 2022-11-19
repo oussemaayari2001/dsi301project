@@ -1,7 +1,6 @@
 const http = require('http');
 const app = require('./app');
-// const {filtrer}=require('./app');
-const server=http.createServer()
+const server=http.createServer(app)
 const normalizePort = val => {
   const port = parseInt(val, 10);
 
@@ -45,4 +44,4 @@ server.on('listening', () => {
   console.log('Listening on ' + bind);
 });
 
-app.listen(port);
+server.listen(port);

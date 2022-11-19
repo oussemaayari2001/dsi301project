@@ -8,9 +8,7 @@ require('./models/index')
 const AnnonceRoute= require('./Routes/AnnonceRoute');
 const CandidatRoute=require('./Routes/CandidatRoute');
 const RHRoute=require('./Routes/RHRoute');
-
-
-
+//Accéder au body du Requete
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -29,9 +27,10 @@ const filtration=require('./Filtration/filtration')
 
 let id_RH='6374e23bec9bcdc8c49970ee'
 
-
 console.log(filtration(id_RH));
 //ADD CSV FILE TO DATABASE
+
 const  read_add_file=require('./Filtration/moveCsvToDb')
 read_add_file()
+
 module.exports = app;
