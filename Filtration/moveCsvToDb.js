@@ -1,4 +1,3 @@
-const csvParser = require('csv-parser');
 const CSV=require('csv-parser');
 const createCsvWriter=require('csv-writer').createObjectCsvWriter
 const csvwriter=createCsvWriter({
@@ -29,22 +28,14 @@ results.forEach(element => {
     elm=new candidat(element)
     elm.save()
 });
-csvwriter.writeRecords([])
-   
+csvwriter.writeRecords([])  
 }
-    
-    
-
 ).on('error',(err)=>{
     console.log(err);
 })    
 
-
-   
-
 }
 
 read_add_CSVfile()
-
 
 module.exports=read_add_CSVfile

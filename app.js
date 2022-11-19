@@ -22,7 +22,7 @@ app.use('/rh',RHRoute);
 
 
 //Module filtration
-const filtration=require('./Filtration/filtrationSelonForm')
+const filtration=require('./Filtration/filtration')
 
 
 //Filtration
@@ -32,6 +32,6 @@ let id_RH='6374e23bec9bcdc8c49970ee'
 
 console.log(filtration(id_RH));
 //ADD CSV FILE TO DATABASE
-const  read_add_file=require('./Filtration/filtrationLinkedIn')
+const  read_add_file=require('./Filtration/moveCsvToDb')
 read_add_file()
 module.exports = app;
