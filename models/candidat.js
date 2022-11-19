@@ -10,12 +10,15 @@ const CandidatSchema=new Schema({
     e_mail:{
         type:String,
     },
+    location:{
+        type:String,
+    },
 
 
    
 
 
-    profil:{
+    profileUrl:{
         type:String,
     },
 
@@ -35,6 +38,10 @@ const CandidatSchema=new Schema({
         type:String,
         lowercase:true  
     },
+    emploie:{
+        type:String,
+        lowercase:true  
+    },
 
     ecole_mas:{
         type:Number,              
@@ -46,7 +53,7 @@ const CandidatSchema=new Schema({
     
     cv:{
         type:String,
-        allowNull:true,        
+              
     },
 })
 
