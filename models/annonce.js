@@ -3,7 +3,15 @@ const Schema = mongoose.Schema;
 
 const AnnonceSchema = new Schema({
 
-    title:{
+    titre:{
+        type:String,
+
+    },
+    experience:{
+        type:String,
+
+    },
+    langue:{
         type:String,
 
     },
@@ -11,7 +19,11 @@ const AnnonceSchema = new Schema({
         type:Number,
 
     },
-    Type_e:{
+    date_dajout:{
+        type:String
+    },
+
+    Type_emploi:{
         type:String,
     },
     niveau:{
@@ -19,13 +31,16 @@ const AnnonceSchema = new Schema({
         
     },
 
-    discription:{
+    description:{
         type:String,
         
     },
-    motcles:{
+    mots_cles:{
         type:String,
         lowercase:true
+    },
+    niveau:{
+    type:String
     },
     Candidats:
     

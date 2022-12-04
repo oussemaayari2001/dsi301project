@@ -7,31 +7,34 @@ const CandidatSchema=new Schema({
     },
 
 
-    e_mail:{
+    email:{
         type:String,
     },
     location:{
         type:String,
+    },
+    linkedIn:{
+        type:String
     },
 
 
    
 
 
-    profileUrl:{
+    profile:{
         type:String,
     },
 
     grade:{
-        type:Number,
+        type:String,
     },
 
-    ecole_lis:{
-        type:Number,
+    ecole_lisence:{
+        type:String,
     },
 
-    ecole_ing:{
-        type:Number,  
+    ecole_ingenieur:{
+        type:String,  
     },
 
     competence:{
@@ -43,15 +46,15 @@ const CandidatSchema=new Schema({
         lowercase:true  
     },
 
-    ecole_mas:{
-        type:Number,              
+    ecole_master:{
+        type:String,              
     },
 
     experience:{
         type:String,  
     },
     
-    cv:{
+    file:{
         type:String,
               
     },

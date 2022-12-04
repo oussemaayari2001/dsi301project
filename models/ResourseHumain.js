@@ -8,9 +8,25 @@ const RHSchema=new Schema({
 
     nom:{
         type:String,
-        validator:{
-            unique:true
-        }
+       
+    },
+
+    email:{
+        type:String,
+        
+    },
+    password:{
+        type:String,
+      
+    },
+    domaineMetier:{
+        type:String
+    },
+    adresse:{
+        type:String
+    },
+    tel:{
+        type:Number
     },
     annonces: [{type:Schema.Types.ObjectId,ref:'Annonce'}]
 })

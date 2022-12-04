@@ -1,11 +1,13 @@
 const express = require('express');
-const annonceController=require('../Controllers/AnnonceController')
+const annonceController=require('../Controllers/AnnonceController');
 const router=express.Router();
 router.get('/', annonceController.getAll);
 router.post('/', annonceController.saveAnnonce);
 router.get('/:id', annonceController.getById);
 router.delete('/:id', annonceController.deleteAnnonce);
-router.put('/:id',annonceController.updateAnnonce)
+router.put('/:id',annonceController.updateAnnonce);
+ router.get('/candidats/:id',annonceController.getCandidatsFromIdAnnonce)
+
 
 
 module.exports = router

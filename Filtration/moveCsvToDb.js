@@ -9,33 +9,35 @@ const csvwriter=createCsvWriter({
         {id:'profile',title:'profile'},
         {id:'competence',title:'competence'}
     ],
-    fieldDelimiter:';',
+    fieldDelimiter:';'
   
 })
 const results=[]
 const fs=require('fs');
-
 const candidat = require('../models/candidat');
-const read_add_CSVfile=()=>{fs.createReadStream('C:/Users/htc/PycharmProjects/ModulePy/testing1.csv')
+const read_add_CSVfile=()=>{
+    fs.createReadStream('C:/Users/htc/PycharmProjects/ModulePy/testing1.csv')
    .pipe(CSV({separator: ';'})).on('data',(chunk)=>{
     console.log("dataaaa",chunk);
    results.push(chunk)
-return results
-    } )
-
-            .on('end',()=>{
-results.forEach(element => {
+}
+)
+    .on('end',()=>
+    {
+    console.log(results+"aaaaaa");
+    results.forEach(element => {
     elm=new candidat(element)
+    console.log(elm);
     elm.save()
 });
 csvwriter.writeRecords([])  
 }
-).on('error',(err)=>{
+
+)
+.on('error',(err)=>{
     console.log(err);
-})    
-
 }
-
+)    
+}
 read_add_CSVfile()
-
 module.exports=read_add_CSVfile
