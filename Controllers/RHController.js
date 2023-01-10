@@ -19,9 +19,19 @@ const getById=(req,res,next)=>{
 
 const saveRh = (req,res,next)=>{
   
+  RH.findOne({
+    
+    //first step
+  email: req.body.email 
 
 
-  
+}
+
+).then((user)=>{
+  if (user) {
+    res.send({err:'Mail Already exists'})
+  } else {
+    
   const hashedPassword =  bcrypt.hashSync(req.body.password, 10)
 
   let __RH = new RH({
@@ -42,10 +52,16 @@ const saveRh = (req,res,next)=>{
     __RH.save().then((r)=>{
       console.log(r);
       return   res.json({r,message:'register succedded'})
+    }).catch((err)=>{
+      res.send({err:err})
     })
 
 
 
+  }
+})
+
+  
 }
 
 const updateRh = (req,res,next)=>{

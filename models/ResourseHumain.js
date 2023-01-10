@@ -13,6 +13,9 @@ const RHSchema=new Schema({
 
     email:{
         type:String,
+        validator:{
+unique:true
+        }
         
     },
     password:{
